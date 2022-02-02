@@ -9,9 +9,20 @@ namespace TriangleTracker.Tests
     [TestMethod]
     public void IsTriangle_True()
     {
-    // eventually your testing code will go here
       Triangle testTriangle = new Triangle();
-      Assert.AreEqual(true, testTriangle.IsTriangle(2, 4, 5));
+      Assert.AreEqual(true, testTriangle.IsTriangle(4, 4, 5));
     }
+    [TestMethod]
+    public void IsTriangle_False()
+    {
+      Triangle testTriangle = new Triangle();
+      Assert.AreEqual(false, testTriangle.IsTriangle(3, 9, 22));
+    }
+    // [TestMethod]
+    // public void IsTriangle_False()
+    // {
+    //   Triangle testTriangle = new Triangle();
+    //   Assert.AreEqual(false, testTriangle.IsTriangle(2, 4, 6));
+    // }
   }
 }
